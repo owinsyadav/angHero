@@ -1,0 +1,29 @@
+<!-- Inputs and output  -->
+<h2>Tutorial App Component</h2>
+  <label>Enter Child value:</label>
+  <input type="text" #ctext (keyup)="onChange(ctext.value)" />
+  <p>Value from App Component: {{parentData}} </p>
+  <!-- Inputs and output  -->
+<h2> {{title}} </h2>
+<div [class.myClass]="applyClass" >Class Binding</div>
+<div [style.color]="applyblue ? 'blue' : 'orange'" >Style Binding</div>
+<!-- property Binding start  -->
+<img alt="Random Image" [src]="imgLink" /><br/>
+<!-- property Binding end  -->
+<!-- Event Binding start  -->
+<input type="text" #demo />
+<button (click)="onClick(demo.value)">Click Me</button><br/>
+<!-- Event Binding end  -->
+<input type="text" [(ngModel)]="fname" />
+<input type="text" [(ngModel)]="lname" />
+FullName: {{fname}} {{lname}}
+
+ <p *ngIf="showelement">Show Element</p>
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">Red color is shown</p>
+    <p *ngSwitchCase="'blue'">Blue color is shown</p>
+    <p *ngSwitchDefault>Yellow color is shown</p>
+</div>
+<p [ngClass]="{classOne:cone, classTwo:ctwo}">ngClass paragraph</p>
+<p [ngStyle]="{'font-style':sty, 'font-size': siz}">ngStyle paragraph</p>
+<button (click)="toggle()">Toggle</button>

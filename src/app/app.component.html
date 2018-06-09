@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1> {{ title }}! </h1>
+  <h4>Header 4 from App Component</h4>
+ 
+  <app-heroes></app-heroes>
+   <!-- Inputs and output  -->
+   <h2>App Component</h2>
+   <label>Enter App Component value:</label>
+   <input type="text" #ptext (keyup)="0" />
+   <p>Value from Tutorial Component: {{childData}} </p>
+ 
+     <!-- Inputs and output  -->
+  <my-tutorials (childEvents)="childData=$event" [parentData]="ptext.value"></my-tutorials>
+  <div class="divCl"></div>
+</div>
+
